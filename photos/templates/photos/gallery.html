@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <h1>Photo Gallery</h1>
+    <div>
+      {% for photo in photos %}
+          <img src="{{ photo.file.url }}">
+          <p>{{ photo.caption }}</p>
+      {% endfor %}
+    </div>
+  </body>
+</html>
