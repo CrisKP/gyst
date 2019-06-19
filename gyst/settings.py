@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     # third-party apps
     'django_extensions',
 
-
     # local apps
     'photos',
 ]
