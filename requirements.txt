@@ -8,3 +8,6 @@ pillow==6.0.0
 
 # formatting
 black==19.3b0
+
+# Google Cloud 
+django-storages[google]
