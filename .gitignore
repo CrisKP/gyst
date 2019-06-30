@@ -5,3 +5,5 @@ ve
 db.sqlite3
 /static
 .DS_Store
+/htmlcov
+geckodriver.log
