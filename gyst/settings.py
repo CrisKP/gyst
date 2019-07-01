@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     # third party apps
     'rest_framework',
+    'corsheaders',
+    'oauth2_provider',
 
     # local apps
     'photos',
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,6 +58,18 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+    ),
+    # We might want to implement this later, but for now we'll just let everyone
+    # see all the things.
+    # "DEFAULT_PERMISSION_CLASSES": (
+    #     "rest_framework.permissions.IsAuthenticated",
+    # ),
+    "PAGE_SIZE": 10,
+}
 
 ROOT_URLCONF = 'gyst.urls'
 
@@ -138,3 +153,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 GS_BUCKET_NAME = 'gyst_bucket'
 GS_PROJECT = 'gyst'
+
+CORS_ORIGIN_WHITELIST = (
+    "http://localhost:3000",
+)
+
+OAUTH2_PROVIDER = {
+    "SCOPES": {"read": "Read scope", "write": "Write scope"},
+}
