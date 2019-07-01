@@ -13,6 +13,7 @@ django-extensions==2.1.9
 django-filter==2.1.0
 django-oauth-toolkit==1.2.0
 django-storages==1.7.1
+django-storages[google]
 djangorestframework==3.9.4
 google-api-core==1.13.0
 google-auth==1.6.3
