@@ -11,4 +11,4 @@ Gyst is an open-source web app for stress-free Django Girls workshop planning
 
 ## Run tests 
 * Running ```pytest --cov=.``` from the root directory will run all tests and output a coverage report to the terminal. 
-* Running ```pytest --cov=. --cov-report html``` will create an interactive html coverage report in the root directory. Open the ```index.html`` file in the ``htmlcov`` directory to browse files that are in need of coverage. You'll want to delete the ```htmlcov`` directory between test runs. 
+* Running ```pytest --cov=. --cov-report html``` will create an interactive html coverage report in the root directory. Open the ```index.html``` file in the ```htmlcov``` directory to browse files that are in need of coverage. You'll want to delete the ```htmlcov``` directory between test runs. 
