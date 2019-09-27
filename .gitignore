@@ -8,3 +8,4 @@ db.sqlite3
 /htmlcov
 geckodriver.log
 .coverage
+stable-sign-244601-6e13f8e87fbe.json
