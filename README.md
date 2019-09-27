@@ -24,7 +24,7 @@ and place it under the root directory of the project
 
 ## API 
 * Photos list: ```http://localhost:8000/api/v1/photos```
-* Photos detail: ```http://localhost:8000/api/v1/photos/pk```
+* Photos detail: ```http://localhost:8000/api/v1/photos/<pk>```
 
 ## Run tests 
 * Running ```pytest --cov=.``` from the root directory will run all tests and output a coverage report to the terminal. 
